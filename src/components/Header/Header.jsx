@@ -1,87 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
+import logo from "../../../public/dish2.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div>
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle"
+      <div>
+        <nav className="p-5  shadow md:flex md:items-center md:justify-between">
+          <div className="flex justify-between items-center ">
+            <span className="flex flex-col items-center justify-center">
+              <img className="w-8" src={logo} alt="" />
+              <h2 className=" text-xl font-extrabold ">DISHCOMPANIONZEN</h2>
+            </span>
+
+            <span
+              className="text-3xl cursor-pointer mx-2 md:hidden block"
+              onClick={toggleMenu}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h7"
-                />
-              </svg>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a>Homepage</a>
-              </li>
-              <li>
-                <a>Portfolio</a>
-              </li>
-              <li>
-                <a>About</a>
-              </li>
-            </ul>
+              <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+            </span>
           </div>
-        </div>
-        <div className="navbar-center">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-          </button>
-          <button className="btn btn-ghost btn-circle">
-            <div className="indicator">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          <ul
+            className={`md:flex md:items-center  md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${
+              isMenuOpen ? "opacity-100 top-[80px]" : "opacity-0 top-[-400px]"
+            } transition-all ease-in duration-500`}
+          >
+            {/* <ul className="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"> */}
+            <li className="mx-4 my-6 md:my-0 font-bold">
+              <Link to="/" className="text-xl hover:text-cyan-500 duration-500">
+                HOME
+              </Link>
+            </li>
+            <li className="mx-4 my-6 md:my-0 font-bold">
+              <Link
+                to="/about"
+                className="text-xl hover:text-cyan-500 duration-500"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                />
-              </svg>
-              <span className="badge badge-xs badge-primary indicator-item"></span>
-            </div>
-          </button>
-        </div>
+                ABOUT US
+              </Link>
+            </li>
+            <li className="mx-4 my-6 md:my-0 font-bold">
+              <Link
+                to="/ourmenu"
+                className="text-xl hover:text-cyan-500 duration-500"
+              >
+                OUR MENU
+              </Link>
+            </li>
+            <li className="mx-4 my-6 md:my-0 font-bold">
+              <Link
+                to="/blog"
+                className="text-xl hover:text-cyan-500 duration-500"
+              >
+                BLOG
+              </Link>
+            </li>
+
+            <li className="mx-4 my-6 md:my-0 font-bold">
+              <Link
+                to="/contact"
+                className="text-xl hover:text-cyan-500 duration-500"
+              >
+                CONTACT US
+              </Link>
+            </li>
+
+            <Link to="/login">
+              <button className="px-4 ml-4 py-2 text-white font-bold rounded transition duration-300 ease-in-out bg-gradient-to-r from-purple-300 to-indigo-500 hover:from-indigo-500 hover:to-purple-300 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500 ">
+                Login
+              </button>
+            </Link>
+          </ul>
+        </nav>
       </div>
     </div>
   );
