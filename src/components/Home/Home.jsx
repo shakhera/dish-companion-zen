@@ -24,6 +24,8 @@ const Home = () => {
           <img src="" alt="" />
         </div>
       </section>
+
+      <hr />
     </div>
   );
 };
