@@ -1,13 +1,14 @@
 import React from "react";
-import Header from "../Header/Header";
 import { Outlet } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import Navbar from "../Navbar";
+
+import Header from "../../pages/shared/Header/Header";
+import Footer from "../../pages/shared/Footer/Footer";
 
 const Root = () => {
   return (
     <div>
       <Header></Header>
+      {/* <NextNab></NextNab> */}
       <Outlet></Outlet>
       <Footer></Footer>
       {/* <Navbar></Navbar> */}

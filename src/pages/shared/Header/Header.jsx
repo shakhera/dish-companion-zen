@@ -1,11 +1,22 @@
-import React, { useState } from "react";
-import logo from "../../../public/dish2.png";
+import React, { useContext, useState } from "react";
+import logo from "../../../../public/dish2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import ActiveLink from "../ActiveLink/ActiveLink";
+import ActiveLink from "../../../components/ActiveLink/ActiveLink";
+import { AuthContext } from "../../../components/Provider/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -75,11 +86,20 @@ const Header = () => {
               </ActiveLink>
             </li>
 
-            <ActiveLink to="/login">
-              <button className="px-4 ml-4 py-2 text-white font-bold rounded transition duration-300 ease-in-out bg-gradient-to-r from-purple-300 to-indigo-500 hover:from-indigo-500 hover:to-purple-300 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500 ">
-                Login
+            {user ? (
+              <button
+                onClick={handleLogOut}
+                className="px-4 ml-4 py-2 text-white font-bold rounded transition duration-300 ease-in-out bg-gradient-to-r from-purple-500 to-indigo-700 hover:from-indigo-500 hover:to-purple-300 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500 "
+              >
+                Logout
               </button>
-            </ActiveLink>
+            ) : (
+              <ActiveLink to="/login">
+                <button className="px-4 ml-4 py-2 text-white font-bold rounded transition duration-300 ease-in-out bg-gradient-to-r from-purple-300 to-indigo-500 hover:from-indigo-500 hover:to-purple-300 hover:bg-gradient-to-r focus:outline-none focus:ring-2 focus:ring-indigo-500 ">
+                  Login
+                </button>
+              </ActiveLink>
+            )}
           </ul>
         </nav>
       </div>
