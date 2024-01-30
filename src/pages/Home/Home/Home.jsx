@@ -1,10 +1,12 @@
 import React from "react";
 import user from "../../../assets/image/user.png";
+import Chef from "../Chef/Chef";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
   return (
     <div>
-      <section className=" md:flex justify-between">
+      {/* <section className=" md:flex justify-between">
         <div className="flex justify-center items-center">
           <div className="mt-12 w-96 text-left">
             <h2 className=" font-manrope text-6xl font-extrabold m-4">
@@ -32,9 +34,10 @@ const Home = () => {
         <div className="">
           <img src={user} alt="" />
         </div>
-      </section>
-
+      </section> */}
+      <Banner></Banner>
       <hr />
+      <Chef></Chef>
     </div>
   );
 };

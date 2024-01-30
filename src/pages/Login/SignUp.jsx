@@ -18,14 +18,17 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     const confirmPassword = form.confirm.value;
-    // const photoUrl = form.photoUrl.value;
-    console.log(name, email, password);
+    const photoUrl = form.photoUrl.value;
+    console.log(name, email, password, photoUrl);
 
     if (password !== confirmPassword) {
       setError("Err: Your Pass did not match ");
       return;
     } else if (password.length < 6) {
       setError("Err: password length must be 6 or longer");
+      return;
+    } else if (!/(?=.*[A-Z])/.test(password)) {
+      setError("Err: Please add at least one upperCase");
       return;
     }
     createUser(email, password)
@@ -117,6 +120,17 @@ const SignUp = () => {
                   placeholder="Confirm password"
                   className="input input-bordered"
                   required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">PhotoUrl</span>
+                </label>
+                <input
+                  type="text"
+                  name="photoUrl"
+                  placeholder="Photo url"
+                  className="input input-bordered"
                 />
               </div>
               <div className="form-control mt-6">

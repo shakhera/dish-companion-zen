@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../components/Provider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
   const { logIn, googleSignIn } = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -12,6 +15,7 @@ const Login = () => {
 
   const handleLogIn = (event) => {
     event.preventDefault();
+    setError("");
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
@@ -21,12 +25,13 @@ const Login = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        setSuccess("user has been create successfully");
         form.reset();
-        navigate("/", { replace: true });
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error.message);
-        // setError(error.message);
+        setError(error.message);
       });
   };
   const handleGoogleSignIn = () => {
@@ -100,6 +105,10 @@ const Login = () => {
                 </p>
               </div>
             </form>
+            <div className="text-center">
+              <p className="text-red-500">{error}</p>
+              <p className="text-green-500">{success}</p>
+            </div>
           </div>
         </div>
       </div>

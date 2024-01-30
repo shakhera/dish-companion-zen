@@ -1,0 +1,184 @@
+[
+  {
+    "chefId": 1,
+    "img": "https://example.com/chef1.jpg",
+    "name": "Ji-yeon Park",
+    "exp": 15,
+    "recipes": 120,
+    "likes": 5000,
+    "bio": "Renowned for modernizing traditional Korean dishes. 5000 likes on social media.",
+    "info": {
+      "awards": ["KCE Award 2018", "Asia's Best Chef 2020"],
+      "restaurant": "Seoul Spice Fusion",
+      "social": {
+        "insta": "@chefjiyeon",
+        "twitter": "@jiyeon_cooking"
+      }
+    }
+  },
+  {
+    "chefId": 2,
+    "img": "https://example.com/chef2.jpg",
+    "name": "Min-ho Kim",
+    "exp": 12,
+    "recipes": 90,
+    "likes": 4500,
+    "bio": "Dynamic force in the Korean culinary scene. 4500 likes on social media.",
+    "info": {
+      "awards": ["Young Chef of the Year 2015", "Best Fusion Chef 2019"],
+      "restaurant": "Kim's Flavor Haven",
+      "social": {
+        "insta": "@chefminho",
+        "facebook": "/minhokimcooking"
+      }
+    }
+  },
+  {
+    "chefId": 3,
+    "img": "https://example.com/chef3.jpg",
+    "name": "Eun-sook Lee",
+    "exp": 20,
+    "recipes": 150,
+    "likes": 6000,
+    "bio": "Culinary veteran with 20 years of experience. 6000 likes on social media.",
+    "info": {
+      "awards": ["Grand Master Chef 2010", "Culinary Innovator Award 2022"],
+      "restaurant": "Eun-sook's Heritage Kitchen",
+      "social": {
+        "insta": "@eunsookchef",
+        "youtube": "/eunsookskitchen"
+      }
+    }
+  },
+  {
+    "chefId": 4,
+    "img": "https://example.com/chef4.jpg",
+    "name": "Sang-hoon Choi",
+    "exp": 18,
+    "recipes": 110,
+    "likes": 5500,
+    "bio": "Innovative approach to traditional Korean cuisine. 5500 likes on social media.",
+    "info": {
+      "awards": ["Creative Culinary Award 2017", "Best Korean Chef 2021"],
+      "restaurant": "Choi's Fusion Delight",
+      "social": {
+        "insta": "@chefsanghoon",
+        "twitter": "@sanghoon_cooking"
+      }
+    }
+  },
+  {
+    "chefId": 5,
+    "img": "https://example.com/chef5.jpg",
+    "name": "Yeon-woo Kim",
+    "exp": 14,
+    "recipes": 95,
+    "likes": 4800,
+    "bio": "Blending classic flavors with a modern twist. 4800 likes on social media.",
+    "info": {
+      "awards": [
+        "Innovative Chef of the Year 2019",
+        "Excellence in Korean Cuisine 2023"
+      ],
+      "restaurant": "Kim's Culinary Haven",
+      "social": {
+        "insta": "@chefyeonwoo",
+        "facebook": "/yeonwoocooking"
+      }
+    }
+  },
+  {
+    "chefId": 6,
+    "img": "https://example.com/chef6.jpg",
+    "name": "Hae-won Shin",
+    "exp": 17,
+    "recipes": 130,
+    "likes": 5800,
+    "bio": "Meticulous attention to traditional Korean culinary techniques. 5800 likes on social media.",
+    "info": {
+      "awards": ["Golden Spoon Award 2016", "Top Korean Chef 2020"],
+      "restaurant": "Shin's Culinary Artistry",
+      "social": {
+        "insta": "@chefhaewon",
+        "youtube": "/haewonskitchen"
+      }
+    }
+  },
+  {
+    "chefId": 7,
+    "img": "https://example.com/chef7.jpg",
+    "name": "Seo-jin Park",
+    "exp": 13,
+    "recipes": 100,
+    "likes": 5200,
+    "bio": "Passionate about preserving and promoting Korean culinary heritage. 5200 likes on social media.",
+    "info": {
+      "awards": [
+        "Preservationist Chef Award 2018",
+        "Top 100 Chefs in Korea 2022"
+      ],
+      "restaurant": "Park's Culinary Legacy",
+      "social": {
+        "insta": "@chefseojin",
+        "twitter": "@seojin_cooking"
+      }
+    }
+  },
+  {
+    "chefId": 8,
+    "img": "https://example.com/chef8.jpg",
+    "name": "Hyo-jin Yoon",
+    "exp": 16,
+    "recipes": 140,
+    "likes": 5600,
+    "bio": "Mastering the art of Korean gastronomy. 5600 likes on social media.",
+    "info": {
+      "awards": [
+        "Master Chef of Korean Cuisine 2015",
+        "Innovator of the Year 2021"
+      ],
+      "restaurant": "Yoon's Culinary Mastery",
+      "social": {
+        "insta": "@chefhyojin",
+        "facebook": "/hyojincooking"
+      }
+    }
+  },
+  {
+    "chefId": 9,
+    "img": "https://example.com/chef9.jpg",
+    "name": "Woo-jin Han",
+    "exp": 19,
+    "recipes": 125,
+    "likes": 5900,
+    "bio": "Crafting delectable dishes with a touch of Korean tradition. 5900 likes on social media.",
+    "info": {
+      "awards": [
+        "Best Korean Fusion Chef 2017",
+        "Culinary Excellence Award 2020"
+      ],
+      "restaurant": "Han's Fusion Delights",
+      "social": {
+        "insta": "@chefwoojin",
+        "youtube": "/woojinskitchen"
+      }
+    }
+  },
+  {
+    "chefId": 10,
+    "img": "https://example.com/chef10.jpg",
+    "name": "Jae-hyun Moon",
+    "exp": 14,
+    "recipes": 105,
+    "likes": 5400,
+    "bio": "A culinary journey celebrating Korea's diverse traditions. 5400 likes on social media.",
+    "info": {
+      "awards": ["Top Young Chef 2019", "Innovative Culinary Artist 2022"],
+      "restaurant": "Moon's Flavor Expedition",
+      "social": {
+        "insta": "@chefjaehyun",
+        "twitter": "@jaehyun_cooking"
+      }
+    }
+  }
+]
