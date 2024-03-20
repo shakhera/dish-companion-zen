@@ -1,7 +1,7 @@
 [
   {
     "chefId": 1,
-    "img": "https://i.postimg.cc/RV5zhtsW/download-2.jpg",
+    "img": "https://i.postimg.cc/k4gk65cV/download.png",
     "name": "Ji-yeon Park",
     "exp": 15,
     "recipes": 120,
@@ -18,7 +18,7 @@
   },
   {
     "chefId": 2,
-    "img": "https://i.postimg.cc/dVnM5xqC/images.jpg",
+    "img": "https://i.postimg.cc/qMFnWDYW/images-1.jpg",
     "name": "Min-ho Kim",
     "exp": 12,
     "recipes": 90,
@@ -35,7 +35,7 @@
   },
   {
     "chefId": 3,
-    "img": "https://i.postimg.cc/wBB2gWDD/images.jpg",
+    "img": "https://i.postimg.cc/mZXFF6bh/OQ5CLB0.jpg",
     "name": "Eun-sook Lee",
     "exp": 20,
     "recipes": 150,
@@ -52,7 +52,7 @@
   },
   {
     "chefId": 4,
-    "img": "https://i.postimg.cc/Znz6Bjv7/images.jpg",
+    "img": "https://i.postimg.cc/k4gk65cV/download.png",
     "name": "Sang-hoon Choi",
     "exp": 18,
     "recipes": 110,
@@ -69,7 +69,7 @@
   },
   {
     "chefId": 5,
-    "img": "https://i.postimg.cc/MGjc7VSh/download.jpg",
+    "img": "https://i.postimg.cc/mZXFF6bh/OQ5CLB0.jpg",
     "name": "Yeon-woo Kim",
     "exp": 14,
     "recipes": 95,
@@ -89,7 +89,7 @@
   },
   {
     "chefId": 6,
-    "img": "https://i.postimg.cc/y82x8xZn/download-1.jpg",
+    "img": "https://i.postimg.cc/k4gk65cV/download.png",
     "name": "Hae-won Shin",
     "exp": 17,
     "recipes": 130,
@@ -106,7 +106,7 @@
   },
   {
     "chefId": 7,
-    "img": "https://i.postimg.cc/HWSpLjG5/download.jpg",
+    "img": "https://i.postimg.cc/qMFnWDYW/images-1.jpg",
     "name": "Seo-jin Park",
     "exp": 13,
     "recipes": 100,
@@ -126,7 +126,7 @@
   },
   {
     "chefId": 8,
-    "img": "https://i.postimg.cc/xCf2fVtt/download-1.jpg",
+    "img": "https://i.postimg.cc/mZXFF6bh/OQ5CLB0.jpg",
     "name": "Hyo-jin Yoon",
     "exp": 16,
     "recipes": 140,
@@ -146,7 +146,7 @@
   },
   {
     "chefId": 9,
-    "img": "https://i.postimg.cc/XqrtqjFc/download.jpg",
+    "img": "https://i.postimg.cc/k4gk65cV/download.png",
     "name": "Woo-jin Han",
     "exp": 19,
     "recipes": 125,
@@ -166,7 +166,7 @@
   },
   {
     "chefId": 10,
-    "img": "https://i.postimg.cc/PNGVqmdT/download-1.jpg",
+    "img": "https://i.postimg.cc/qMFnWDYW/images-1.jpg",
     "name": "Jae-hyun Moon",
     "exp": 14,
     "recipes": 105,

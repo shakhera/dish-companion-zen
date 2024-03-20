@@ -3,15 +3,15 @@ import { Outlet } from "react-router-dom";
 
 import Header from "../../pages/shared/Header/Header";
 import Footer from "../../pages/shared/Footer/Footer";
+import Navbar from "../../pages/shared/Header/Navbar";
 
 const Root = () => {
   return (
     <div>
       <Header></Header>
-      {/* <NextNab></NextNab> */}
+      {/* <Navbar></Navbar> */}
       <Outlet></Outlet>
       <Footer></Footer>
-      {/* <Navbar></Navbar> */}
     </div>
   );
 };

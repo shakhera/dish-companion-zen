@@ -24,11 +24,18 @@ const Header = () => {
   return (
     <div>
       <div>
-        <nav className="p-5  shadow md:flex md:items-center md:justify-between">
+        <nav className="p-5 shadow md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center ">
             <span className="flex flex-col items-center justify-center">
               <img className="w-8" src={logo} alt="" />
-              <h2 className=" text-xl font-extrabold ">DISHCOMPANIONZEN</h2>
+              <Link
+                to="/"
+                className="btn btn-ghost text-xl font-extrabold hover:bg-white"
+              >
+                DISHCOMPANIONZEN
+              </Link>
+
+              {/* <h2 className=" text-xl font-extrabold ">DISHCOMPANIONZEN</h2> */}
             </span>
 
             <span
@@ -39,8 +46,8 @@ const Header = () => {
             </span>
           </div>
           <ul
-            className={`md:flex md:items-center  md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${
-              isMenuOpen ? "opacity-100 top-[80px]" : "opacity-0 top-[-400px]"
+            className={`md:flex md:items-center z-10 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${
+              isMenuOpen ? "opacity-85 top-[80px]" : "opacity-0 top-[-400px]"
             } transition-all ease-in duration-500`}
           >
             {/* <ul className="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"> */}

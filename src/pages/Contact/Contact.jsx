@@ -6,8 +6,8 @@ const Contact = () => {
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <div className="md:w-1/2 pr-12 text-center lg:text-left">
-            <img src={contact} alt="" />
+          <div className="md:w-1/2 md:pr-12 text-center lg:text-left">
+            <img src={contact} alt="" className="" />
           </div>
           <div className="card  md:w-1/2 max-w-sm shadow-2xl bg-base-100">
             <form className="card-body">

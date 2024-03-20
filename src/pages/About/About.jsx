@@ -12,8 +12,8 @@ const About = () => {
       </h2>
 
       <div className="md:flex my-12">
-        <div className="w-1/2 pl-12">
-          <img src={about} alt="" className="md:h-96 rounded-xl" />
+        <div className="md:w-1/2 px-12 md:pl-12">
+          <img src={about} alt="" className="h-96  rounded-xl" />
           {/* <img src={about1} alt="" className="h-96" /> */}
         </div>
         <div className="md:w-1/2">
