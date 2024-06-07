@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Kimchi",
+    "img": "https://i.postimg.cc/DytS1n60/1.jpg"
+  },
+  {
+    "category": "Bibimbap",
+    "img": "https://i.postimg.cc/gJkjGJzS/2.jpg"
+  },
+  {
+    "category": "Bulgogi",
+    "img": "https://i.postimg.cc/0yRNbZ5J/3.jpg"
+  },
+  {
+    "category": "Japchae",
+    "img": "https://i.postimg.cc/3RR8Pc1z/4.jpg"
+  },
+  {
+    "category": "Kimchi Jjigae",
+    "img": "https://i.postimg.cc/59DzSBNf/5.jpg"
+  },
+  {
+    "category": "Tteokbokki",
+    "img": "https://i.postimg.cc/xdsJJH4D/6.jpg"
+  }
+]

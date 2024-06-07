@@ -3,6 +3,7 @@ import axios from "axios";
 const useAxiosPublic = () => {
   const axiosPublic = axios.create({
     baseURL: "chef.json",
+    // baseURL: "http://localhost:5000",
   });
   return axiosPublic;
 };

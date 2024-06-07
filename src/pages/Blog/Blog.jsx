@@ -1,107 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
+import Blogs from "./Blogs";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
+  const blogData = [
+    {
+      question: "What are some popular cooking techniques?",
+      answer:
+        "Popular cooking techniques include grilling, roasting, sautéing, baking, steaming, boiling, frying, and braising.",
+    },
+    {
+      question: "What are some common kitchen utensils and their uses?",
+      answer:
+        "Common kitchen utensils include knives (for chopping, slicing, and dicing), cutting boards, pots and pans, spatulas, wooden spoons, mixing bowls, measuring cups and spoons, and colanders.",
+    },
+    {
+      question: "How can I make my own pizza dough from scratch?",
+      answer:
+        "To make pizza dough from scratch, you'll need flour, yeast, water, salt, and optionally, olive oil and sugar. Combine the ingredients, knead the dough until it's smooth and elastic, then let it rise until doubled in size. Roll out the dough, add your favorite toppings, and bake in a preheated oven until the crust is golden brown.",
+    },
+    {
+      question: "What are some healthy alternatives to common ingredients?",
+      answer:
+        "Some healthy alternatives include using whole grain flour instead of white flour, Greek yogurt instead of sour cream, avocado or hummus instead of mayonnaise, and olive oil instead of butter.",
+    },
+    {
+      question: "How can I tell if meat is cooked properly?",
+      answer:
+        "You can use a meat thermometer to check the internal temperature of meat. For example, chicken should be cooked to an internal temperature of 165°F (75°C), while beef steaks can be cooked to varying degrees of doneness depending on preference (e.g., rare, medium rare, medium, well done).",
+    },
+    {
+      question: "What are some tips for reducing food waste in the kitchen?",
+      answer:
+        "Some tips include planning meals in advance, storing leftovers properly, using vegetable scraps to make homemade broth or composting, and freezing perishable items before they spoil.",
+    },
+    {
+      question: "How can I make a basic tomato sauce from scratch?",
+      answer:
+        "To make a basic tomato sauce, you'll need tomatoes (fresh or canned), onions, garlic, olive oil, salt, pepper, and optionally, herbs like basil or oregano. Sauté the onions and garlic in olive oil, add the tomatoes and seasonings, then simmer until the sauce thickens.",
+    },
+    {
+      question:
+        "What are some traditional dishes from different cuisines around the world?",
+      answer:
+        "Traditional dishes include Italian pasta dishes like spaghetti carbonara and lasagna, Mexican dishes like tacos and enchiladas, Indian dishes like chicken tikka masala and palak paneer, Chinese dishes like fried rice and kung pao chicken, and French dishes like coq au vin and beef bourguignon.",
+    },
+  ];
+
+  const [expanded, setExpanded] = useState([]);
+
+  const handleReadMore = (index) => {
+    // If the index is already expanded, remove it from the list
+    if (expanded.includes(index)) {
+      setExpanded(prevIndexes => prevIndexes.filter(i => i !== index));
+    } else {
+      // If the index is not expanded, add it to the list
+      setExpanded(prevIndexes => [...prevIndexes, index]);
+    }
+  };
+
   return (
-    <div className=" md:w-3/4 mx-auto my-12">
-      <div className="join join-vertical ">
-        <div className="collapse collapse-arrow join-item border border-base-300">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title text-xl font-medium">
-            Tell us the differences between uncontrolled and controlled
-            components.
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-10/12 mx-auto mt-4">
+        {blogData.map((post, index) => (
+          <div key={index} className="shadow-xl rounded-lg">
+            <div className="p-4">
+              <h2 className="text-xl font-semibold mb-2 ">{post.question}</h2>
+
+              {/* Render the full answer if expanded, otherwise show only part of it */}
+            <p className="text-gray-700">{expanded.includes(index) ? post.answer : `${post.answer.slice(0, 100)}...`}</p>
+            {/* Show "Read More" button */}
+              <button
+                className="text-blue-500 mt-2 inline-block hover:underline"
+                onClick={() => handleReadMore(index)}
+              >
+                {expanded.includes(index) ? "Show Less" : "Read More"}
+              </button>
+            </div>
           </div>
-          <div className="collapse-content">
-            <p>
-              Controlled and uncontrolled components represent distinct
-              approaches to managing state in React applications. In controlled
-              components, React oversees and controls the component state, which
-              is passed down from a parent component as props. This approach
-              ensures a clear and explicit data flow, ideal for scenarios
-              requiring precise coordination. In contrast, uncontrolled
-              components manage their state independently, often leveraging refs
-              to interact directly with the DOM. This approach is suitable for
-              situations where React does not need full control over the state,
-              offering simplicity and ease of integration with non-React code or
-              imperative APIs. The decision between controlled and uncontrolled
-              components hinges on the specific requirements and design
-              principles of a given application.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border border-base-300">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title text-xl font-medium">
-            How to validate React props using PropTypes
-          </div>
-          <div className="collapse-content">
-            <p>
-              In React, PropTypes is a library that enables the validation of
-              component props, ensuring that they adhere to specified types. To
-              use PropTypes, first, import it into your component file. Next,
-              define the PropTypes for your component by creating a propTypes
-              property, detailing the expected types for each prop. For
-              instance, you can specify that a prop should be a string, number,
-              boolean, or other types, and whether it is required. During
-              development, if a prop does not match the defined type or is
-              missing when marked as required, React will issue a warning in the
-              console. This helps catch potential errors and enhances the
-              reliability of your components by enforcing the expected prop
-              types. The PropTypes library also provides various validators,
-              allowing for intricate type checking, and its usage contributes to
-              a more robust and maintainable codebase.
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border border-base-300">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title text-xl font-medium">
-            Tell us the difference between nodejs and express js.
-          </div>
-          <div className="collapse-content">
-            <p>
-              Node.js and Express.js are both JavaScript-based technologies
-              commonly used in web development, but they serve different
-              purposes. Node.js is a runtime environment that allows the
-              execution of JavaScript code on the server side. It provides the
-              platform for building scalable and high-performance network
-              applications. In contrast, Express.js is a web application
-              framework built on top of Node.js, simplifying the process of
-              building web applications and APIs. Express.js provides a set of
-              features and tools, such as routing, middleware, and templating,
-              to streamline the development of web applications. While Node.js
-              is the underlying runtime, Express.js acts as a higher-level
-              framework that facilitates the creation of web servers and
-              handling HTTP requests and responses. In essence, Node.js is the
-              runtime environment, and Express.js is a framework that runs on
-              top of Node.js, providing a more structured and feature-rich
-              approach for building web applications
-            </p>
-          </div>
-        </div>
-        <div className="collapse collapse-arrow join-item border border-base-300">
-          <input type="radio" name="my-accordion-4" />
-          <div className="collapse-title text-xl font-medium">
-            What is a custom hook, and why will you create a custom hook?
-          </div>
-          <div className="collapse-content">
-            <p>
-              A custom hook in React is a JavaScript function that encapsulates
-              reusable logic or stateful behavior and can be shared across
-              multiple components. Custom hooks allow developers to extract
-              complex logic from components, promoting code reusability, and
-              maintainability. The naming convention for custom hooks is to use
-              the prefix "use" to indicate that it follows the rules of Hooks in
-              React. Developers create custom hooks when they find themselves
-              duplicating or sharing similar logic among different components.
-              This can include tasks like managing state, handling side effects,
-              or encapsulating behavior specific to a certain feature. Custom
-              hooks abstract away the implementation details, allowing
-              components to consume the logic without needing to understand its
-              internal workings.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
+
+      <Blogs></Blogs>
     </div>
   );
 };

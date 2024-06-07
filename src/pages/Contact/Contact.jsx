@@ -39,7 +39,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-info">Button</button>
+                <button className="btn btn-info">Send message</button>
               </div>
             </form>
           </div>

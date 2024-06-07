@@ -5,11 +5,11 @@ import about1 from "../../assets/about/about.avif";
 const About = () => {
   return (
     <div>
-      <h2 className=" font-manrope md:text-6xl font-extrabold m-4 text-center">
+      {/* <h2 className=" font-manrope md:text-6xl font-extrabold m-4 text-center">
         Welcome to <br></br>
         <span className="text-purple-700"> dishCompanionZen</span> <br />
         Your Culinary Haven for Korean Delights!
-      </h2>
+      </h2> */}
 
       <div className="md:flex my-12">
         <div className="md:w-1/2 px-12 md:pl-12">

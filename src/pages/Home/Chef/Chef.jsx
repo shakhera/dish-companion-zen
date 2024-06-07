@@ -13,6 +13,7 @@ const Chef = () => {
       return res.data;
     },
   });
+  
 
   const [displayAllCard, setDisplayAllCard] = useState(false);
   const initialDisplayCard = 3;
@@ -32,8 +33,9 @@ const Chef = () => {
     <div>
       <h2 className="text-2xl font-bold text-center my-6">Chef Section</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-10/12 mx-auto">
-        {chefs
-          .slice(0, displayAllCard ? chefs.length : displayCard)
+        {chefs.slice(0, displayAllCard
+        ?
+         chefs.length : displayCard)
           .map((chef) => (
             <AnimatedCard key={chef.chefId} chef={chef}></AnimatedCard>
           ))}

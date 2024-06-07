@@ -2,7 +2,6 @@ import React from "react";
 import Root from "../Lauout/Root";
 import Home from "../../pages/Home/Home/Home";
 import About from "../../pages/About/About";
-import Menu from "../../pages/Menu/Menu";
 import Contact from "../../pages/Contact/Contact";
 import Blog from "../../pages/Blog/Blog";
 import Footer from "../../pages/shared/Footer/Footer";
@@ -10,6 +9,7 @@ import Login from "../../pages/Login/Login";
 import SignUp from "../../pages/Login/SignUp";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import { createBrowserRouter } from "react-router-dom";
+import Menu from "../../pages/Menu/Menu/Menu";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +27,7 @@ export const router = createBrowserRouter([
       {
         path: "/ourmenu",
         element: <Menu></Menu>,
+        // loader: () => fetch("http://localhost:5000/dishes"),
       },
       {
         path: "/contact",

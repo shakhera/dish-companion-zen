@@ -34,8 +34,6 @@ const Header = () => {
               >
                 DISHCOMPANIONZEN
               </Link>
-
-              {/* <h2 className=" text-xl font-extrabold ">DISHCOMPANIONZEN</h2> */}
             </span>
 
             <span

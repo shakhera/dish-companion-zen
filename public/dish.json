@@ -1,0 +1,242 @@
+[
+  {
+    "category": "Kimchi",
+    "img": "https://i.postimg.cc/DytS1n60/1.jpg",
+    "rating": 4.5,
+    "views": 1000,
+    "cooking_time": "30 minutes",
+    "types": ["Side Dish", "Fermented"],
+    "likes": 500,
+    "price": "$8.99",
+    "origin_info": {
+      "spiciness": "Medium",
+      "main_ingredient": "Cabbage",
+      "origin": "Korea",
+      "popular_pairing": ["Rice", "Stir-fried Dishes"]
+    }
+  },
+  {
+    "category": "Bibimbap",
+    "img": "https://i.postimg.cc/gJkjGJzS/2.jpg",
+    "rating": 4.7,
+    "views": 1500,
+    "cooking_time": "45 minutes",
+    "types": ["Main Course"],
+    "likes": 700,
+    "price": "$10.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Rice, Vegetables, Beef",
+      "origin": "Korea",
+      "popular_pairing": ["Kimchi", "Japchae"]
+    }
+  },
+  {
+    "category": "Bulgogi",
+    "img": "https://i.postimg.cc/0yRNbZ5J/3.jpg",
+    "rating": 4.8,
+    "views": 2000,
+    "cooking_time": "40 minutes",
+    "types": ["Main Course", "Barbecue"],
+    "likes": 800,
+    "price": "$12.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Beef",
+      "origin": "Korea",
+      "popular_pairing": ["Lettuce Wraps", "Rice"]
+    }
+  },
+  {
+    "category": "Japchae",
+    "img": "https://i.postimg.cc/3RR8Pc1z/4.jpg",
+    "rating": 4.6,
+    "views": 1200,
+    "cooking_time": "35 minutes",
+    "types": ["Main Course", "Noodle Dish"],
+    "likes": 600,
+    "price": "$11.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Sweet Potato Noodles",
+      "origin": "Korea",
+      "popular_pairing": ["Kimchi", "Bulgogi"]
+    }
+  },
+  {
+    "category": "Kimchi Jjigae",
+    "img": "https://i.postimg.cc/59DzSBNf/5.jpg",
+    "rating": 4.4,
+    "views": 800,
+    "cooking_time": "50 minutes",
+    "types": ["Soup", "Stew"],
+    "likes": 400,
+    "price": "$9.99",
+    "origin_info": {
+      "spiciness": "Spicy",
+      "main_ingredient": "Kimchi, Pork",
+      "origin": "Korea",
+      "popular_pairing": ["Rice", "Tofu Soup"]
+    }
+  },
+  {
+    "category": "Tteokbokki",
+    "img": "https://i.postimg.cc/xdsJJH4D/6.jpg",
+    "rating": 4.9,
+    "views": 2500,
+    "cooking_time": "25 minutes",
+    "types": ["Street Food", "Snack"],
+    "likes": 900,
+    "price": "$6.99",
+    "origin_info": {
+      "spiciness": "Spicy",
+      "main_ingredient": "Rice Cake, Fish Cake",
+      "origin": "Korea",
+      "popular_pairing": ["Eomuk (Fish Cake) Soup", "Fried Mandu"]
+    }
+  },
+  {
+    "category": "Samgyeopsal",
+    "img": "https://i.postimg.cc/DytS1n60/1.jpg",
+    "rating": 4.6,
+    "views": 1600,
+    "cooking_time": "20 minutes",
+    "types": ["Barbecue", "Pork"],
+    "likes": 750,
+    "price": "$14.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Pork Belly",
+      "origin": "Korea",
+      "popular_pairing": ["Lettuce Wraps", "Kimchi"]
+    }
+  },
+  {
+    "category": "Dakgalbi",
+    "img": "https://i.postimg.cc/gJkjGJzS/2.jpg",
+    "rating": 4.5,
+    "views": 1400,
+    "cooking_time": "35 minutes",
+    "types": ["Chicken Dish", "Spicy"],
+    "likes": 600,
+    "price": "$13.99",
+    "origin_info": {
+      "spiciness": "Spicy",
+      "main_ingredient": "Chicken, Vegetables",
+      "origin": "Korea",
+      "popular_pairing": ["Rice", "Stir-fried Rice Cake"]
+    }
+  },
+  {
+    "category": "Haemul Pajeon",
+    "img": "https://i.postimg.cc/0yRNbZ5J/3.jpg",
+    "rating": 4.7,
+    "views": 1800,
+    "cooking_time": "25 minutes",
+    "types": ["Seafood Pancake"],
+    "likes": 800,
+    "price": "$11.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Seafood, Green Onions",
+      "origin": "Korea",
+      "popular_pairing": ["Makgeolli (Korean Rice Wine)", "Soy Dipping Sauce"]
+    }
+  },
+  {
+    "category": "Bokkeumbap",
+    "img": "https://i.postimg.cc/3RR8Pc1z/4.jpg",
+    "rating": 4.6,
+    "views": 1700,
+    "cooking_time": "30 minutes",
+    "types": ["Fried Rice"],
+    "likes": 700,
+    "price": "$9.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Rice, Vegetables, Meat",
+      "origin": "Korea",
+      "popular_pairing": ["Kimchi", "Fried Egg"]
+    }
+  },
+  {
+    "category": "Sundubu Jjigae",
+    "img": "https://i.postimg.cc/xdsJJH4D/6.jpg",
+    "rating": 4.4,
+    "views": 1300,
+    "cooking_time": "40 minutes",
+    "types": ["Soft Tofu Stew", "Soup"],
+    "likes": 550,
+    "price": "$10.99",
+    "origin_info": {
+      "spiciness": "Spicy",
+      "main_ingredient": "Soft Tofu, Seafood",
+      "origin": "Korea",
+      "popular_pairing": ["Rice", "Kimchi"]
+    }
+  },
+  {
+    "category": "Banchan",
+    "img": "https://i.postimg.cc/DytS1n60/1.jpg",
+    "rating": 4.7,
+    "views": 1900,
+    "cooking_time": "Varies",
+    "types": ["Side Dish"],
+    "likes": 850,
+    "price": "$7.99",
+    "origin_info": {
+      "spiciness": "Varies",
+      "main_ingredient": "Varies",
+      "origin": "Korea",
+      "popular_pairing": ["Rice", "Main Dishes"]
+    }
+  },
+  {
+    "category": "Korean BBQ",
+    "img": "https://i.postimg.cc/gJkjGJzS/2.jpg",
+    "rating": 4.8,
+    "views": 2100,
+    "cooking_time": "Varies",
+    "types": ["Barbecue"],
+    "likes": 950,
+    "price": "$16.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Various Meats",
+      "origin": "Korea",
+      "popular_pairing": ["Lettuce Wraps", "Kimchi"]
+    }
+  },
+  {
+    "category": "Kimbap",
+    "img": "https://i.postimg.cc/0yRNbZ5J/3.jpg",
+    "rating": 4.6,
+    "views": 1600,
+    "cooking_time": "30 minutes",
+    "types": ["Rice Roll", "Snack"],
+    "likes": 700,
+    "price": "$8.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Rice, Vegetables, Meat",
+      "origin": "Korea",
+      "popular_pairing": ["Kimchi", "Dipping Sauce"]
+    }
+  },
+  {
+    "category": "Galbi",
+    "img": "https://i.postimg.cc/3RR8Pc1z/4.jpg",
+    "rating": 4.8,
+    "views": 2200,
+    "cooking_time": "Varies",
+    "types": ["Short Rib", "Barbecue"],
+    "likes": 1000,
+    "price": "$18.99",
+    "origin_info": {
+      "spiciness": "Mild",
+      "main_ingredient": "Beef Short Ribs",
+      "origin": "Korea",
+      "popular_pairing": ["Lettuce Wraps", "Kimchi"]
+    }
+  }
+]
