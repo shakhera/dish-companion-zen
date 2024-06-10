@@ -1,11 +1,12 @@
 import React from "react";
+import ChefDetails from "../ChefDetails/ChefDetails";
 
 const AnimatedCard = ({ chef }) => {
   const { img, name, exp, recipes, likes, bio, info } = chef;
   return (
     <div>
       <div>
-        <div className="max-h-[300px] bg-base-100 shadow-2xl rotate-3 hover:rotate-0 duration-500 overflow-hidden hover:scale-105">
+        <div className="max-h-[300px] bg-base-100 shadow-2xl duration-500 overflow-hidden hover:scale-110">
           <div className="flex">
             <figure className="w-1/2">
               <img src={img} alt="chef" className=" h-48" />
@@ -36,9 +37,15 @@ const AnimatedCard = ({ chef }) => {
               <p>{likes}</p>
             </div>
             <div className="card-actions justify-end">
-              <button className="btn btn-outline border-0 border-b-4 ">
+              <button
+                onClick={() =>
+                  document.getElementById("chefDetails").showModal()
+                }
+                className="btn btn-outline border-0 border-b-4 "
+              >
                 Details
               </button>
+              <ChefDetails chef={chef}></ChefDetails>
             </div>
           </div>
         </div>

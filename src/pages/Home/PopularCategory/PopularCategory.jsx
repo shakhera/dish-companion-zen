@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import dish from "../../../assets/category/dish.avif";
+import { Link } from "react-router-dom";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const PopularCategory = () => {
   const [category, setCategory] = useState([]);
@@ -13,18 +15,25 @@ const PopularCategory = () => {
   }, []);
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center mt-12 mb-8">
-        Popular Category
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-2 w-2/3 mx-auto">
+      <div className="flex justify-center items-center w-2/3 mx-auto">
+        <h2 className="text-2xl font-bold text-center mt-12 mb-8 flex-grow">
+          Search by Food
+        </h2>
+        <div className="">
+          <Link to="/ourmenu">
+            <button className="btn btn-outline border-0 border-b-4">
+              VIEW ALL <FaAngleDoubleRight/>
+            </button>
+          </Link>
+        </div>
+      </div>
+      <div className="w-11/12 mx-auto flex flex-wrap justify-center gap-4">
         {category.map((item, index) => (
-          <div key={index} className="">
-            <div className="flex gap-3  items-center">
-              <img src={item.img} alt="" className="w-16 h-16 rounded-full" />
-              <h3 className="text-3xl font-bold text-slate-500 hover:text-stone-900">
-                {item.category}
-              </h3>
-            </div>
+          <div key={index} className="flex flex-col items-center">
+            <img src={item.img} alt="" className="w-44 h-44 rounded-full" />
+            <h3 className="text-xl font-bold text-slate-500 hover:text-stone-900">
+              {item.category}
+            </h3>
           </div>
         ))}
       </div>

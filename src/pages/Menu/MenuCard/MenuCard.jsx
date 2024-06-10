@@ -3,23 +3,17 @@ import "@smastrom/react-rating/style.css";
 
 import React from "react";
 import { FaEye } from "react-icons/fa";
+import MenuDetails from "../MenuDetails/MenuDetails";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const MenuCard = ({ dish }) => {
-  const {
-    category,
-    img,
-    rating,
-    views,
-    cooking_time,
-    types,
-    origin_info,
-    price,
-  } = dish;
+  const { category, img, rating, views, cooking_time, price, _id } = dish;
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
         <figure>
-          <img src={img} alt="food" className="h-64" />
+          <img src={img} alt="food" className="h-48 w-full object-cover" />
         </figure>
         <div className="card-body">
           <div className="text-center">
@@ -37,14 +31,22 @@ const MenuCard = ({ dish }) => {
             </div>
             <div className="flex gap-4">
               <div>
-                <button className="btn btn-outline border-0 border-b-4">
-                  Order
-                </button>
+                <Link to="#">
+                  <button className="btn btn-outline border-0 border-b-4">
+                    Order Now
+                  </button>
+                </Link>
               </div>
               <div>
-                <button className="btn btn-outline border-0 border-b-4">
+                <button
+                  onClick={() =>
+                    document.getElementById("menuCardModal").showModal()
+                  }
+                  className="btn btn-outline border-0 border-b-4"
+                >
                   Details
                 </button>
+                <MenuDetails dish={dish}></MenuDetails>
               </div>
             </div>
           </div>

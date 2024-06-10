@@ -29,6 +29,14 @@ export const router = createBrowserRouter([
         element: <Menu></Menu>,
         // loader: () => fetch("http://localhost:5000/dishes"),
       },
+      // {
+      //   path: "/menuDetails/:id",
+      //   element: <MenuDetails></MenuDetails>,
+      //   loader: ({ params }) =>
+      //     fetch(`http://localhost:5000/dishes/${params.id}`).then((res) =>
+      //       res.json()
+      //     ),
+      // },
       {
         path: "/contact",
         element: <Contact></Contact>,

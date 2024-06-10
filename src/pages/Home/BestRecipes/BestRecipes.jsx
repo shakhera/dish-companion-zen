@@ -1,16 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BestRecipes = () => {
   return (
     <div>
       <div className="space-y-12 my-8">
-        <h2 className="text-4xl font-bold  mt-12 mb-6 border-b-2 border-black w-64 mx-auto">Populat Recipe</h2>
+        <h2 className="text-2xl font-bold text-center mt-12">
+          Popular Recipe
+        </h2>
         <div className="flex">
           <div className="w-1/2">
             <img
               src="https://i.postimg.cc/0yRNbZ5J/3.jpg"
               alt=""
-              className="rounded-xl w-[600px] h-[350px]  mx-auto"
+              className="rounded-xl w-[600px] h-[350px] mx-auto"
             />
           </div>
           <div className="w-[40%] ">
@@ -27,9 +30,11 @@ const BestRecipes = () => {
               experience like no other.
             </p>
             <div className="flex justify-end">
-              <button className="btn btn-outline border-0 border-b-4">
-                Order now
-              </button>
+              <Link to="/ourmenu">
+                <button className="btn btn-outline border-0 border-b-4">
+                  Order now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -42,7 +47,9 @@ const BestRecipes = () => {
             />
           </div>
           <div className="w-[40%] ">
-            <h2 className="text-5xl  text-right  font-bold text-cyan-800 my-5">Bulgogi</h2>
+            <h2 className="text-5xl  text-right  font-bold text-cyan-800 my-5">
+              Bulgogi
+            </h2>
             <p>
               Japchae, a beloved Korean dish, presents a delightful harmony of
               flavors and textures. Stir-fried glass noodles, made from sweet
@@ -54,9 +61,11 @@ const BestRecipes = () => {
               cherished favorite in Korean cuisine.
             </p>
             <div className="flex justify-start">
-              <button className="btn btn-outline border-0 border-b-4">
-                Order now
-              </button>
+              <Link to="/ourmenu">
+                <button className="btn btn-outline border-0 border-b-4">
+                  Order now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -81,9 +90,11 @@ const BestRecipes = () => {
               cuisine.
             </p>
             <div className="flex justify-end">
-              <button className="btn btn-outline border-0 border-b-4">
-                Order now
-              </button>
+              <Link to="/ourmenu">
+                <button className="btn btn-outline border-0 border-b-4">
+                  Order now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -110,9 +121,11 @@ const BestRecipes = () => {
               households.
             </p>
             <div className="flex justify-start">
-              <button className="btn btn-outline border-0 border-b-4">
-                Order now
-              </button>
+              <Link to="/ourmenu">
+                <button className="btn btn-outline border-0 border-b-4">
+                  Order now
+                </button>
+              </Link>
             </div>
           </div>
         </div>

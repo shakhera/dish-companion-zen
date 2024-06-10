@@ -1,0 +1,92 @@
+[
+  {
+    "category": "Kimchi",
+    "img": "https://i.postimg.cc/DytS1n60/1.jpg",
+    "rating": 4.5,
+    "price": "$8.99"
+  },
+  {
+    "category": "Bibimbap",
+    "img": "https://i.postimg.cc/gJkjGJzS/2.jpg",
+    "rating": 4.7,
+    "price": "$10.99"
+  },
+  {
+    "category": "Bulgogi",
+    "img": "https://i.postimg.cc/0yRNbZ5J/3.jpg",
+    "rating": 4.8,
+    "price": "$12.99"
+  },
+  {
+    "category": "Japchae",
+    "img": "https://i.postimg.cc/3RR8Pc1z/4.jpg",
+    "rating": 4.6,
+    "price": "$11.99"
+  },
+  {
+    "category": "Kimchi Jjigae",
+    "img": "https://i.postimg.cc/59DzSBNf/5.jpg",
+    "rating": 4.4,
+    "price": "$9.99"
+  },
+  {
+    "category": "Tteokbokki",
+    "img": "https://i.postimg.cc/xdsJJH4D/6.jpg",
+    "rating": 4.9,
+    "price": "$6.99"
+  },
+  {
+    "category": "Samgyeopsal",
+    "img": "https://i.postimg.cc/DytS1n60/1.jpg",
+    "rating": 4.6,
+    "price": "$14.99"
+  },
+  {
+    "category": "Dakgalbi",
+    "img": "https://i.postimg.cc/gJkjGJzS/2.jpg",
+    "rating": 4.5,
+    "price": "$13.99"
+  },
+  {
+    "category": "Haemul Pajeon",
+    "img": "https://i.postimg.cc/0yRNbZ5J/3.jpg",
+    "rating": 4.7,
+    "price": "$11.99"
+  },
+  {
+    "category": "Bokkeumbap",
+    "img": "https://i.postimg.cc/3RR8Pc1z/4.jpg",
+    "rating": 4.6,
+    "price": "$9.99"
+  },
+  {
+    "category": "Sundubu Jjigae",
+    "img": "https://i.postimg.cc/xdsJJH4D/6.jpg",
+    "rating": 4.4,
+    "price": "$10.99"
+  },
+  {
+    "category": "Banchan",
+    "img": "https://i.postimg.cc/DytS1n60/1.jpg",
+    "rating": 4.7,
+    "price": "$7.99"
+  },
+  {
+    "category": "Korean BBQ",
+    "img": "https://i.postimg.cc/gJkjGJzS/2.jpg",
+    "rating": 4.8,
+    "price": "$16.99"
+  },
+  {
+    "category": "Kimbap",
+    "img": "https://i.postimg.cc/0yRNbZ5J/3.jpg",
+    "rating": 4.6,
+    "price": "$8.99"
+  },
+  {
+    "category": "Galbi",
+    "img": "https://i.postimg.cc/3RR8Pc1z/4.jpg",
+    "rating": 4.8,
+    "price": "$18.99"
+  }
+]

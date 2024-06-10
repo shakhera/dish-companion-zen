@@ -3,85 +3,111 @@ import Blogs from "./Blogs";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
-  const blogData = [
+  const foodBlog = [
     {
-      question: "What are some popular cooking techniques?",
-      answer:
-        "Popular cooking techniques include grilling, roasting, sautéing, baking, steaming, boiling, frying, and braising.",
+      img: "https://i.postimg.cc/DytS1n60/1.jpg",
+      teaser: "Tasty Food For You",
+      description:
+        "Dive into the tangy and spicy world of traditional Korean Kimchi. This fermented cabbage side dish is packed with flavor and probiotics, making it a delicious and healthy addition to any meal.",
     },
     {
-      question: "What are some common kitchen utensils and their uses?",
-      answer:
-        "Common kitchen utensils include knives (for chopping, slicing, and dicing), cutting boards, pots and pans, spatulas, wooden spoons, mixing bowls, measuring cups and spoons, and colanders.",
+      img: "https://i.postimg.cc/gJkjGJzS/2.jpg",
+      teaser: "A Symphony of Flavors",
+      description:
+        "Experience the vibrant and delicious bowl of Bibimbap. This mixed rice dish is topped with an array of colorful vegetables, savory beef, and a fried egg, all brought together with a spicy gochujang sauce.",
     },
     {
-      question: "How can I make my own pizza dough from scratch?",
-      answer:
-        "To make pizza dough from scratch, you'll need flour, yeast, water, salt, and optionally, olive oil and sugar. Combine the ingredients, knead the dough until it's smooth and elastic, then let it rise until doubled in size. Roll out the dough, add your favorite toppings, and bake in a preheated oven until the crust is golden brown.",
+      img: "https://i.postimg.cc/0yRNbZ5J/3.jpg",
+      teaser: "Savor the Savory",
+      description:
+        "Indulge in the rich, savory taste of Bulgogi. This Korean barbecue dish features tender beef marinated in a sweet and savory sauce, perfect when wrapped in lettuce and paired with rice.",
     },
     {
-      question: "What are some healthy alternatives to common ingredients?",
-      answer:
-        "Some healthy alternatives include using whole grain flour instead of white flour, Greek yogurt instead of sour cream, avocado or hummus instead of mayonnaise, and olive oil instead of butter.",
+      img: "https://i.postimg.cc/3RR8Pc1z/4.jpg",
+      teaser: "Noodles to Delight",
+      description:
+        "Japchae is a Korean noodle dish made from sweet potato noodles, stir-fried with a colorful mix of vegetables and seasoned beef. It's a perfect balance of sweet and savory flavors.",
     },
     {
-      question: "How can I tell if meat is cooked properly?",
-      answer:
-        "You can use a meat thermometer to check the internal temperature of meat. For example, chicken should be cooked to an internal temperature of 165°F (75°C), while beef steaks can be cooked to varying degrees of doneness depending on preference (e.g., rare, medium rare, medium, well done).",
+      img: "https://i.postimg.cc/59DzSBNf/5.jpg",
+      teaser: "A Hearty Stew",
+      description:
+        "Kimchi Jjigae is a spicy Korean stew made with aged kimchi and pork. This hearty dish is perfect for a comforting meal, offering a rich and spicy taste that warms the soul.",
     },
     {
-      question: "What are some tips for reducing food waste in the kitchen?",
-      answer:
-        "Some tips include planning meals in advance, storing leftovers properly, using vegetable scraps to make homemade broth or composting, and freezing perishable items before they spoil.",
+      img: "https://i.postimg.cc/xdsJJH4D/6.jpg",
+      teaser: "Street Food Favorite",
+      description:
+        "Tteokbokki is a popular Korean street food made from chewy rice cakes and fish cakes, all simmered in a spicy gochujang sauce. It's a fiery, delicious snack that you can't miss.",
     },
     {
-      question: "How can I make a basic tomato sauce from scratch?",
-      answer:
-        "To make a basic tomato sauce, you'll need tomatoes (fresh or canned), onions, garlic, olive oil, salt, pepper, and optionally, herbs like basil or oregano. Sauté the onions and garlic in olive oil, add the tomatoes and seasonings, then simmer until the sauce thickens.",
+      img: "https://i.postimg.cc/DytS1n60/1.jpg",
+      teaser: "Grill Perfection",
+      description:
+        "Samgyeopsal is a Korean barbecue favorite featuring thick slices of pork belly grilled to perfection. Wrap the grilled pork in lettuce with a bit of kimchi for a delightful bite.",
     },
     {
-      question:
-        "What are some traditional dishes from different cuisines around the world?",
-      answer:
-        "Traditional dishes include Italian pasta dishes like spaghetti carbonara and lasagna, Mexican dishes like tacos and enchiladas, Indian dishes like chicken tikka masala and palak paneer, Chinese dishes like fried rice and kung pao chicken, and French dishes like coq au vin and beef bourguignon.",
+      img: "https://i.postimg.cc/gJkjGJzS/2.jpg",
+      teaser: "Spicy Chicken Delight",
+      description:
+        "Dakgalbi is a spicy Korean chicken dish stir-fried with vegetables and rice cakes. This flavorful dish is known for its rich, spicy taste and is a favorite among spicy food lovers.",
     },
+    
+    
   ];
 
   const [expanded, setExpanded] = useState([]);
 
   const handleReadMore = (index) => {
-    // If the index is already expanded, remove it from the list
     if (expanded.includes(index)) {
-      setExpanded(prevIndexes => prevIndexes.filter(i => i !== index));
+      setExpanded((prevIndexes) => prevIndexes.filter((i) => i !== index));
     } else {
-      // If the index is not expanded, add it to the list
-      setExpanded(prevIndexes => [...prevIndexes, index]);
+      setExpanded((prevIndexes) => [...prevIndexes, index]);
     }
   };
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-10/12 mx-auto mt-4">
-        {blogData.map((post, index) => (
-          <div key={index} className="shadow-xl rounded-lg">
-            <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2 ">{post.question}</h2>
-
-              {/* Render the full answer if expanded, otherwise show only part of it */}
-            <p className="text-gray-700">{expanded.includes(index) ? post.answer : `${post.answer.slice(0, 100)}...`}</p>
-            {/* Show "Read More" button */}
-              <button
-                className="text-blue-500 mt-2 inline-block hover:underline"
-                onClick={() => handleReadMore(index)}
-              >
-                {expanded.includes(index) ? "Show Less" : "Read More"}
-              </button>
+      <div className="min-h-screen flex justify-end">
+        <div className="w-full  bg-cyan-600 rounded-s-full ">
+          <main className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {foodBlog.map((food, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg overflow-hidden shadow-lg"
+                >
+                  <div
+                    className={`p-6 text-center ${
+                      index % 2 === 0 ? "bg-blue-200" : "bg-green-200"
+                    }`}
+                  >
+                    <img
+                      src={food.img}
+                      alt={food.teaser}
+                      className="w-full h-48 object-cover mb-4 rounded-lg"
+                    />
+                    <h2 className="text-xl font-bold text-gray-800">
+                      {food.teaser}
+                    </h2>
+                    <p className="text-gray-600 mt-2">
+                      {expanded.includes(index)
+                        ? food.description
+                        : `${food.description.slice(0, 100)}...`}
+                      <button
+                        className="text-blue-500 mt-2 inline-block hover:underline"
+                        onClick={() => handleReadMore(index)}
+                      >
+                        {expanded.includes(index) ? "Show Less" : "Read More"}
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-        ))}
+          </main>
+        </div>
       </div>
-
-      <Blogs></Blogs>
     </div>
   );
 };
