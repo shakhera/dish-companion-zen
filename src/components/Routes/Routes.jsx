@@ -10,6 +10,7 @@ import SignUp from "../../pages/Login/SignUp";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import { createBrowserRouter } from "react-router-dom";
 import Menu from "../../pages/Menu/Menu/Menu";
+import FoodOrder from "../../pages/Menu/FoodOrder/FoodOrder";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       //       res.json()
       //     ),
       // },
+      {
+        path: "foodOrder",
+        element: <FoodOrder></FoodOrder>
+      },
       {
         path: "/contact",
         element: <Contact></Contact>,

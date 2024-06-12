@@ -4,11 +4,17 @@ import "@smastrom/react-rating/style.css";
 import React from "react";
 import { FaEye } from "react-icons/fa";
 import MenuDetails from "../MenuDetails/MenuDetails";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const MenuCard = ({ dish }) => {
   const { category, img, rating, views, cooking_time, price, _id } = dish;
+  const navigate = useNavigate();
+
+  const handleOrderNow = (dish) => {
+    console.log(dish);
+    navigate("/foodOrder", { state: { dish } });
+  };
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
@@ -31,11 +37,12 @@ const MenuCard = ({ dish }) => {
             </div>
             <div className="flex gap-4">
               <div>
-                <Link to="#">
-                  <button className="btn btn-outline border-0 border-b-4">
-                    Order Now
-                  </button>
-                </Link>
+                <button
+                  onClick={() => handleOrderNow(dish)}
+                  className="btn btn-outline border-0 border-b-4"
+                >
+                  Order Now
+                </button>
               </div>
               <div>
                 <button

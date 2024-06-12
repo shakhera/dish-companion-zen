@@ -41,7 +41,7 @@ const Menu = () => {
   });
 
   useEffect(() => {
-    const url = `http://localhost:5000/dishes?page=${page}&size=${size}`;
+    const url = `https://dish-companion-zen-server-shakheras-projects.vercel.app/dishes?page=${page}&size=${size}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -85,12 +85,17 @@ const Menu = () => {
       {/* display menu  */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-10/12 mx-auto">
         {filteredDishes.length > 0 ? (
-          filteredDishes.map((dish) => <MenuCard key={dish._id} dish={dish} />)
+          filteredDishes.map((dish) => (
+            <MenuCard
+              key={dish._id}
+              dish={dish}
+              setSearchQuery={setSearchQuery}
+            />
+          ))
         ) : (
           <p className="text-red-600 text-center w-full ">No dishes found</p>
         )}
       </div>
-     
 
       {/* pagination  */}
       <div className="mt-12 mb-6 flex select-none justify-center items-center bg-white shadow-lg rounded-sm w-fit mx-auto">
