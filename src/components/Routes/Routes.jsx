@@ -28,19 +28,19 @@ export const router = createBrowserRouter([
       {
         path: "/ourmenu",
         element: <Menu></Menu>,
-        // loader: () => fetch("http://localhost:5000/dishes"),
+        // loader: () => fetch("https://dish-companion-zen-server.vercel.app/dishes"),
       },
       // {
       //   path: "/menuDetails/:id",
       //   element: <MenuDetails></MenuDetails>,
       //   loader: ({ params }) =>
-      //     fetch(`http://localhost:5000/dishes/${params.id}`).then((res) =>
+      //     fetch(`https://dish-companion-zen-server.vercel.app/dishes/${params.id}`).then((res) =>
       //       res.json()
       //     ),
       // },
       {
         path: "foodOrder",
-        element: <FoodOrder></FoodOrder>
+        element: <FoodOrder></FoodOrder>,
       },
       {
         path: "/contact",

@@ -2,14 +2,14 @@ import React from "react";
 
 const Location = () => {
   return (
-    <div>
-      <address className="text-gray-600 text-center mb-4">
+    <section className="container mx-auto px-2 py-4">
+      <address className="text-gray-600 text-center mb-4 px-3">
         Mawlana Bhashani Science and Technology University, Santosh,
         Tangail-1902
       </address>
       <div
-        className="relative overflow-hidden max-h-[200px]"
-        style={{ paddingBottom: "30%" }}
+        className="relative overflow-hidden max-h-[300px] sm:max-h-[400px] md:max-h-[400px]"
+        style={{ paddingBottom: "56.25%" }}
       >
         <iframe
           className="absolute top-0 left-0 w-full h-full"
@@ -20,7 +20,7 @@ const Location = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </div>
+    </section>
   );
 };
 

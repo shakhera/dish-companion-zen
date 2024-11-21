@@ -3,10 +3,10 @@ import Offered12 from "./Offered12";
 
 const OfferedFood = () => {
   return (
-    <div className="">
-      <div className="max-w-7xl  lg:ml-64 mx-auto h-[400px] lg:h-[570px] px-3 lg:px-10 flex items-center justify-center overflow-hidden gap-5 lg:gap-10 relative">
-        <div className="bg-[#f3f9fc] w-full absolute left-0 h-[540px] lg:h-[670px] -z-40"></div>
-        <div className="w-full lg:w-1/3 text-center lg:text-left space-y-2 lg:space-y-5 py-5">
+    <section className="container mx-auto flex items-center justify-center">
+      <div className=" lg:ml-64  h-[400px] lg:h-[570px] px-3 lg:px-10 flex items-center justify-center overflow-hidden gap-5 lg:gap-10 relative">
+        <div className="w-full absolute left-0 h-[540px] lg:h-[670px] -z-40"></div>
+        <div className="w-full lg:w-1/3 mx-auto text-center lg:text-left space-y-2 lg:space-y-5 py-5">
           <h1 className="text-lg md:text-2xl lg:text-[40px] font-bold">
             Discover 10+ Delicious Dishes
           </h1>
@@ -20,7 +20,7 @@ const OfferedFood = () => {
         </div>
         <Offered12 />
       </div>
-    </div>
+    </section>
   );
 };
 

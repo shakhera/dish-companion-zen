@@ -66,105 +66,103 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col ">
-          <div className="card shrink-0 w-full shadow-2xl bg-base-100">
-            <form onSubmit={handleSignUp} className="card-body">
-              <div className="text-center ">
-                <h1 className="text-3xl font-bold">Create An Account</h1>
-              </div>
-              <div className="flex gap-x-4">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Name*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="name"
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Email*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="email"
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="flex gap-x-4">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Password*</span>
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="password"
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Confirm Password*</span>
-                  </label>
-                  <input
-                    type="password"
-                    name="confirm"
-                    placeholder="Confirm password"
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
-              </div>
+    <section className="w-full md:w-8/12 lg:w-4/12 mx-auto min-h-screen">
+      <div className="hero-content">
+        <div className="card shadow-2xl ">
+          <form onSubmit={handleSignUp} className="card-body">
+            <div className="text-center ">
+              <h1 className="text-3xl font-bold">Create An Account</h1>
+            </div>
+            <div className="md:flex gap-x-4">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">PhotoUrl</span>
+                  <span className="label-text">Name*</span>
                 </label>
                 <input
                   type="text"
-                  name="photoUrl"
-                  placeholder="Photo url"
+                  name="name"
+                  placeholder="name"
                   className="input input-bordered"
+                  required
                 />
               </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">SignUp</button>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Email*</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="email"
+                  className="input input-bordered"
+                  required
+                />
               </div>
-              <div>
-                <p className="label-text">
-                  <small>Alreadu have an account? </small>
-                  <Link to="/login" className="text-blue-500">
-                    Login
-                  </Link>
-                </p>
-              </div>
-              <h3 className="text-center">Or</h3>
-              <button
-                onClick={handleGoogleSignIn}
-                className="btn btn-outline btn-primary"
-              >
-                <FaGoogle></FaGoogle>
-                CONTINUE WITH GOOGLE
-              </button>
-            </form>
-            <div className="text-center">
-              <p className="text-red-500">{error}</p>
-              <p className="text-green-500">{success}</p>
             </div>
+            <div className="md:flex gap-x-4">
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Password*</span>
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Confirm Password*</span>
+                </label>
+                <input
+                  type="password"
+                  name="confirm"
+                  placeholder="Confirm password"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">PhotoUrl</span>
+              </label>
+              <input
+                type="text"
+                name="photoUrl"
+                placeholder="Photo url"
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control mt-6">
+              <button className="btn btn-primary">SignUp</button>
+            </div>
+            <div>
+              <p className="label-text">
+                <small>Alreadu have an account? </small>
+                <Link to="/login" className="text-blue-500">
+                  Login
+                </Link>
+              </p>
+            </div>
+            <h3 className="text-center">Or</h3>
+            <button
+              onClick={handleGoogleSignIn}
+              className="btn btn-outline btn-primary"
+            >
+              <FaGoogle></FaGoogle>
+              CONTINUE WITH GOOGLE
+            </button>
+          </form>
+          <div className="text-center">
+            <p className="text-red-500">{error}</p>
+            <p className="text-green-500">{success}</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

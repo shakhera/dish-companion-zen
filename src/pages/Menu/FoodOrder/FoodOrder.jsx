@@ -35,7 +35,7 @@ const FoodOrder = ({ searchQuery, setSearchQuery }) => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 p-8 rounded-lg shadow-lg mb-8 w-full md:w-2/3 mx-auto">
+    <section className="bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 p-8 rounded-lg shadow-lg mb-8 w-full md:w-2/3 mx-auto">
       <h2 className="text-2xl font-bold  mb-6 text-center">Order Your Food</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
@@ -99,7 +99,7 @@ const FoodOrder = ({ searchQuery, setSearchQuery }) => {
           Submit
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 

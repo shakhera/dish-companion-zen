@@ -41,7 +41,7 @@ const Menu = () => {
   });
 
   useEffect(() => {
-    const url = `https://dish-companion-zen-server-shakheras-projects.vercel.app/dishes?page=${page}&size=${size}`;
+    const url = `https://dish-companion-zen-server.vercel.app/dishes?page=${page}&size=${size}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -58,12 +58,12 @@ const Menu = () => {
   };
 
   return (
-    <div className="">
+    <section className="container mx-auto px-2 py-4">
       {/* search category  */}
-      <div className="flex justify-between items-center mb-4 w-10/12 mx-auto">
+      <div className="flex justify-between items-center mb-4 md:w-10/12 mx-auto gap-4">
         <input
           type="text"
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs "
           placeholder="Search dishes..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -143,7 +143,7 @@ const Menu = () => {
         <FoodOrder searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </div>
       <Location></Location>
-    </div>
+    </section>
   );
 };
 

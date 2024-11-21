@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Blogs from "./Blogs";
-import { Link } from "react-router-dom";
 
 const Blog = () => {
   const foodBlog = [
@@ -52,8 +50,6 @@ const Blog = () => {
       description:
         "Dakgalbi is a spicy Korean chicken dish stir-fried with vegetables and rice cakes. This flavorful dish is known for its rich, spicy taste and is a favorite among spicy food lovers.",
     },
-    
-    
   ];
 
   const [expanded, setExpanded] = useState([]);
@@ -67,48 +63,46 @@ const Blog = () => {
   };
 
   return (
-    <div>
-      <div className="min-h-screen flex justify-end">
-        <div className="w-full  bg-cyan-600 rounded-s-full ">
-          <main className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {foodBlog.map((food, index) => (
+    <section className="container mx-auto  px-3 my-6 flex justify-end">
+      <div className="w-full bg-cyan-600 rounded-s-full ">
+        <main className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {foodBlog.map((food, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg overflow-hidden shadow-lg"
+              >
                 <div
-                  key={index}
-                  className="bg-white rounded-lg overflow-hidden shadow-lg"
+                  className={`p-6 text-center ${
+                    index % 2 === 0 ? "bg-blue-200" : "bg-green-200"
+                  }`}
                 >
-                  <div
-                    className={`p-6 text-center ${
-                      index % 2 === 0 ? "bg-blue-200" : "bg-green-200"
-                    }`}
-                  >
-                    <img
-                      src={food.img}
-                      alt={food.teaser}
-                      className="w-full h-48 object-cover mb-4 rounded-lg"
-                    />
-                    <h2 className="text-xl font-bold text-gray-800">
-                      {food.teaser}
-                    </h2>
-                    <p className="text-gray-600 mt-2">
-                      {expanded.includes(index)
-                        ? food.description
-                        : `${food.description.slice(0, 100)}...`}
-                      <button
-                        className="text-blue-500 mt-2 inline-block hover:underline"
-                        onClick={() => handleReadMore(index)}
-                      >
-                        {expanded.includes(index) ? "Show Less" : "Read More"}
-                      </button>
-                    </p>
-                  </div>
+                  <img
+                    src={food.img}
+                    alt={food.teaser}
+                    className="w-full h-48 object-cover mb-4 rounded-lg"
+                  />
+                  <h2 className="text-xl font-bold text-gray-800">
+                    {food.teaser}
+                  </h2>
+                  <p className="text-gray-600 mt-2">
+                    {expanded.includes(index)
+                      ? food.description
+                      : `${food.description.slice(0, 100)}...`}
+                    <button
+                      className="text-blue-500 mt-2 inline-block hover:underline"
+                      onClick={() => handleReadMore(index)}
+                    >
+                      {expanded.includes(index) ? "Show Less" : "Read More"}
+                    </button>
+                  </p>
                 </div>
-              ))}
-            </div>
-          </main>
-        </div>
+              </div>
+            ))}
+          </div>
+        </main>
       </div>
-    </div>
+    </section>
   );
 };
 
